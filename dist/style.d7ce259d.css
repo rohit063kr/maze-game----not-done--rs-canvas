@@ -1,0 +1,125 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(145deg, #9947e6, #ec39ec);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10vh 0;
+  font-family: sans-serif;
+}
+
+.timer {
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.btn > * {
+  padding: 0.6rem 1.5rem;
+  border: 0;
+  border-radius: 100px;
+  box-shadow: 0px 5px 8px 2px #00000078;
+  transform: translateY(-2px);
+  transition: all 0.3s;
+  font-size: 1.7rem;
+}
+.btn > *:active {
+  transform: translateY(0px);
+  box-shadow: 0px 5px 8px 0px #00000078;
+}
+.btn > *:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  width: 45rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+.game__box {
+  width: 100%;
+  height: 1.4rem;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+.game__border {
+  background: #000;
+  border: #000;
+}
+.game__insect {
+  background: green;
+  grid-row: 1/2;
+  grid-column: 3/4;
+  position: absolute;
+}
+
+.controller {
+  margin-right: 3rem;
+  width: 20rem;
+  height: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+}
+.controller > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  box-shadow: 1px 0px 8px 2px #00000078;
+  transition: all 0.3s;
+  transform: scale(1);
+}
+.controller > *:active {
+  box-shadow: 1px 0px 8px 0px #00000078;
+  transform: scale(0.97);
+}
+.controller__left {
+  grid-column: 1/2;
+  grid-row: 2/-1;
+  background: orangered;
+}
+.controller__right {
+  grid-column: 3/-1;
+  grid-row: 2/-1;
+  background: green;
+}
+.controller__down {
+  grid-column: 2/3;
+  grid-row: 2/-1;
+  background: gold;
+}
+.controller__up {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background: brown;
+}
+
+/*# sourceMappingURL=/style.d7ce259d.css.map */
